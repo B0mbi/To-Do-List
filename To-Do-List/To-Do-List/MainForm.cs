@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using To_Do_List.UI.UserControls;
 
 namespace To_Do_List
 {
@@ -17,6 +18,7 @@ namespace To_Do_List
         {
             InitializeComponent();
             initComponent();
+            initTaskTest();
         }
 
         private void initComponent()
@@ -32,6 +34,16 @@ namespace To_Do_List
             }
             tasksPanel.BackColor = Color.FromArgb(138, 176, 194);
             calendarOperatorPanel.BackColor = Color.FromArgb(52, 73, 85);
+        }
+
+        private void initTaskTest()
+        {
+            SimpleTaskUserControl simpleTask = new SimpleTaskUserControl(Color.LightCoral);
+            simpleTask.Location = new Point(40, 20);
+            tasksPanel.Controls.Add(simpleTask);
+            SimpleTaskUserControl simpleTask2 = new SimpleTaskUserControl(Color.LightGreen);
+            simpleTask2.Location = new Point(40, 110);
+            tasksPanel.Controls.Add(simpleTask2);
         }
 
     }
