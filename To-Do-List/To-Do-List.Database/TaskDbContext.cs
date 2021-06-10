@@ -10,7 +10,7 @@ namespace To_Do_List.Database
 {
     class TaskDbContext : DbContext
     {
-        public TaskDbContext() : base ("Server=./(localhost);Database=To-Do-List;Trusted_Connection=True;")
+        public TaskDbContext() : base (@"Server=(localdb)\mssqllocaldb;Database=To-Do-List;Trusted_Connection=True")
         {
 
         }
