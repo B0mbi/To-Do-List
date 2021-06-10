@@ -8,7 +8,7 @@ using To_Do_List.Database.Entities;
 
 namespace To_Do_List.Database
 {
-    class TaskDbContext : DbContext
+    public class TaskDbContext : DbContext
     {
         public TaskDbContext() : base (@"Server=(localdb)\mssqllocaldb;Database=To-Do-List;Trusted_Connection=True")
         {

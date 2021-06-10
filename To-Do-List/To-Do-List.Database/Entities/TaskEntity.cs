@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace To_Do_List.Database.Entities
 {
-    class TaskEntity
+    public class TaskEntity
     {
         [Key]
         public int ID { get; set; }
