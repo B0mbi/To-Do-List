@@ -30,6 +30,8 @@ namespace To_Do_List.UI.UserControls
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.descriptionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -41,11 +43,31 @@ namespace To_Do_List.UI.UserControls
             this.panel1.Size = new System.Drawing.Size(650, 17);
             this.panel1.TabIndex = 0;
             // 
+            // nameLabel
+            // 
+            this.nameLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nameLabel.Location = new System.Drawing.Point(68, 10);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(158, 41);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "taskName";
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.descriptionLabel.Location = new System.Drawing.Point(232, 10);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(297, 41);
+            this.descriptionLabel.TabIndex = 2;
+            this.descriptionLabel.Text = "taskDescription";
+            // 
             // SimpleTaskUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Controls.Add(this.descriptionLabel);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.panel1);
             this.Name = "SimpleTaskUserControl";
             this.Size = new System.Drawing.Size(650, 71);
@@ -56,5 +78,7 @@ namespace To_Do_List.UI.UserControls
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label descriptionLabel;
     }
 }
